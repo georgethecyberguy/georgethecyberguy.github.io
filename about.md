@@ -15,7 +15,8 @@ The site exists to do three things: keep a public record of the projects, docume
 | Credential | Issuer | Status |
 | --- | --- | --- |
 | Cybersecurity Analyst+ (CySA+) | CompTIA | Active |
-| Systems Security Certified Practitioner (SSCP) | ISC2 | Endorsement pending |
+| Security+ CE | CompTIA | Active|
+| Systems Security Certified Practitioner (SSCP) | ISC2 | Active |
 | Certified in Cybersecurity (CC) | ISC2 | Active |
 
 **On deck:** AWS Cloud Practitioner → AI Practitioner → SysOps Administrator → Security Specialty. Terraform Associate woven in along the way.
