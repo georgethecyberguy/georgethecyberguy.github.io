@@ -1,0 +1,31 @@
+---
+layout: default
+title: Writing
+permalink: /writing/
+---
+<article class="page container narrow">
+  <header class="page-header">
+    <p class="eyebrow">Archive</p>
+    <h1 class="page-title">Writing</h1>
+    <p class="page-subtitle">
+      Walkthroughs, project notes, and the occasional reflection on the
+      grind from blue team to cloud security.
+    </p>
+  </header>
+
+  <ul class="index-list">
+    {% for post in site.posts %}
+      <li>
+        <a class="index-row" href="{{ post.url | relative_url }}">
+          <span class="row-meta">{{ post.date | date: "%Y · %b %d" }}</span>
+          <span class="row-title">{{ post.title }}</span>
+          {% if post.tags.size > 0 %}
+            <span class="row-tag">{{ post.tags[0] }}</span>
+          {% else %}
+            <span></span>
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</article>

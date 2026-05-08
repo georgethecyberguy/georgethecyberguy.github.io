@@ -1,0 +1,76 @@
+# --------------------------------------------------------------------
+# Site
+# --------------------------------------------------------------------
+title: George Hall
+tagline: Blue team engineer. Building toward cloud security.
+description: >-
+  Network security analyst and blue team engineer documenting projects,
+  walkthroughs, and the road to cloud security.
+author: George Hall
+email: # leave blank or fill in
+url: "https://georgethecyberguy.github.io"
+baseurl: ""
+
+# --------------------------------------------------------------------
+# Social / contact
+# --------------------------------------------------------------------
+github_username: georgethecyberguy
+linkedin_username: george-hall-iv
+
+# --------------------------------------------------------------------
+# Build
+# --------------------------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+permalink: /writing/:title/
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# --------------------------------------------------------------------
+# Plugins (all GitHub Pages whitelisted)
+# --------------------------------------------------------------------
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# --------------------------------------------------------------------
+# Collections
+# --------------------------------------------------------------------
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# --------------------------------------------------------------------
+# Defaults
+# --------------------------------------------------------------------
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+# --------------------------------------------------------------------
+# Exclude
+# --------------------------------------------------------------------
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - README.md
+  - .jekyll-cache

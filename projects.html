@@ -1,0 +1,28 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+<article class="page container narrow">
+  <header class="page-header">
+    <p class="eyebrow">Index</p>
+    <h1 class="page-title">Projects</h1>
+    <p class="page-subtitle">
+      Labs, walkthroughs, and ongoing builds. Most ship as repositories on
+      GitHub; the writeups live here.
+    </p>
+  </header>
+
+  <ul class="index-list">
+    {% assign projects = site.projects | sort: 'order' %}
+    {% for project in projects %}
+      <li>
+        <a class="index-row" href="{{ project.url | relative_url }}">
+          <span class="row-meta">{{ project.year }}</span>
+          <span class="row-title">{{ project.title }}</span>
+          <span class="row-tag">{{ project.kind }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</article>

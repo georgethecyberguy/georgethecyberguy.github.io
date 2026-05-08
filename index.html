@@ -1,0 +1,67 @@
+---
+layout: default
+title: Home
+---
+<div class="container">
+  <section class="home-hero">
+    <p class="eyebrow">Houston, TX · Established 2024</p>
+    <h1 class="home-headline">
+      Detection, defense, and the long road to <em>cloud security</em>.
+    </h1>
+    <p class="home-lede">
+      I'm <strong>George Hall</strong> — a network security analyst and blue
+      team engineer. This site is where I publish lab walkthroughs, project
+      writeups, and notes from the certification and cloud-security path.
+    </p>
+
+    <aside class="now-box">
+      <p class="eyebrow">Currently</p>
+      <ul>
+        <li>Studying for the AWS Cloud Practitioner exam.</li>
+        <li>Building hands-on labs in KodeKloud and Let's Defend.</li>
+        <li>Writing up the SOC Automation Lab.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="home-section">
+    <div class="home-section-header">
+      <h2>Recent writing</h2>
+      <a class="home-section-link" href="{{ '/writing/' | relative_url }}">All posts →</a>
+    </div>
+    <ul class="index-list">
+      {% for post in site.posts limit:5 %}
+        <li>
+          <a class="index-row" href="{{ post.url | relative_url }}">
+            <span class="row-meta">{{ post.date | date: "%Y · %b %d" }}</span>
+            <span class="row-title">{{ post.title }}</span>
+            {% if post.tags.size > 0 %}
+              <span class="row-tag">{{ post.tags[0] }}</span>
+            {% else %}
+              <span></span>
+            {% endif %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="home-section">
+    <div class="home-section-header">
+      <h2>Selected projects</h2>
+      <a class="home-section-link" href="{{ '/projects/' | relative_url }}">All projects →</a>
+    </div>
+    <ul class="index-list">
+      {% assign projects = site.projects | sort: 'order' %}
+      {% for project in projects limit:6 %}
+        <li>
+          <a class="index-row" href="{{ project.url | relative_url }}">
+            <span class="row-meta">{{ project.year }}</span>
+            <span class="row-title">{{ project.title }}</span>
+            <span class="row-tag">{{ project.kind }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
