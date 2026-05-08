@@ -1,0 +1,26 @@
+---
+title: Project Name Goes Here
+order: 7
+year: 2026
+kind: Lab
+status: In progress
+role: Lead / sole contributor
+stack:
+  - Tool One
+  - Tool Two
+  - Tool Three
+repo: https://github.com/georgethecyberguy/repo-name
+summary: One-line description that appears at the top of the project page and could appear in indexes.
+---
+
+Opening paragraph that sets context — what this is and why it exists.
+
+## What's inside
+
+A section describing the components, structure, or scope.
+
+## Why it matters
+
+What you got out of building it, or what someone reading the writeup learns.
+
+[View the repository]({{ page.repo }}).
