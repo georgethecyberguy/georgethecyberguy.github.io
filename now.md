@@ -10,10 +10,11 @@ subtitle: A short, time-stamped record of what I'm focused on right now. Updated
 
 - **AWS Cloud Practitioner** — first stop on the AWS track. Working through the official study materials and KodeKloud labs.
 - Continuing with **Let's Defend** scenarios on the side to keep blue-team chops sharp.
+- Learning how to utilize Terraform for Cloud security
 
 ## Building
 
-- Writing up the **SOC Automation Lab** end-to-end — Wazuh + TheHive + Shuffle, with a focus on the detection-to-containment loop.
+- Writing up CTFs, Let's Defend Labs and different cloud projects involving security-baked-in and not an afterthought.
 - Migrating older walkthroughs out of READMEs and into proper writeups here.
 
 ## Reading
