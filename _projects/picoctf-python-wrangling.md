@@ -1,4 +1,5 @@
 ---
+group: lab
 title: "picoCTF — Python Wrangling"
 order: 105
 year: 2026
