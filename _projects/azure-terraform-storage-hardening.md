@@ -1,4 +1,5 @@
 ---
+group: lab
 title: "Hardening Azure Storage with Terraform"
 order: 7
 year: 2026
