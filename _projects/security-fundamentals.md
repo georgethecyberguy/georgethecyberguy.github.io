@@ -1,4 +1,5 @@
 ---
+group: lab
 title: Security Fundamentals — TryHackMe Path
 order: 4
 year: 2024
