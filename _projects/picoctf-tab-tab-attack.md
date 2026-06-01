@@ -1,4 +1,5 @@
 ---
+group: lab
 title: "picoCTF — Tab, Tab, Attack"
 order: 101
 year: 2026
