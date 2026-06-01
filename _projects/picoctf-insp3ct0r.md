@@ -1,4 +1,5 @@
 ---
+group: lab
 title: "picoCTF — Insp3ct0r"
 order: 102
 year: 2026
