@@ -1,4 +1,5 @@
 ---
+group: lab
 title: "picoCTF — Wave a flag"
 order: 100
 year: 2026
