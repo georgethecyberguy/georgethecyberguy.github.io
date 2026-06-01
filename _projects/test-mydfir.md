@@ -1,4 +1,5 @@
 ---
+group: lab
 title: Test-MyDFIR
 order: 5
 year: 2024
