@@ -1,4 +1,5 @@
 ---
+group: lab
 title: "picoCTF — PW Crack 1"
 order: 106
 year: 2026
