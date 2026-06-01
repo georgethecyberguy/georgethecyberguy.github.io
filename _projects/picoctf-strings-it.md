@@ -1,4 +1,5 @@
 ---
+group: lab
 title: "picoCTF — strings it"
 order: 103
 year: 2026
