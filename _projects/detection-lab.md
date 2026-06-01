@@ -1,4 +1,5 @@
 ---
+group: lab
 title: Detection Lab
 order: 1
 year: 2025
