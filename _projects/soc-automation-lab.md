@@ -1,4 +1,5 @@
 ---
+group: lab
 title: SOC Automation Lab
 order: 2
 year: 2025
