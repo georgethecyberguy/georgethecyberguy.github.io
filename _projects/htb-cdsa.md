@@ -1,4 +1,5 @@
 ---
+group: lab
 title: HTB Certified Defensive Security Analyst (CDSA) — Walkthroughs
 order: 3
 year: 2025
