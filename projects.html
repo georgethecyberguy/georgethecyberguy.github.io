@@ -8,21 +8,60 @@ permalink: /projects/
     <p class="eyebrow">Index</p>
     <h1 class="page-title">Projects</h1>
     <p class="page-subtitle">
-      Labs, walkthroughs, and ongoing builds. Most ship as repositories on
-      GitHub; the writeups live here.
+      Tools, labs, and walkthroughs. Most ship as repositories on GitHub;
+      the writeups live here.
     </p>
   </header>
 
-  <ul class="index-list">
-    {% assign projects = site.projects | sort: 'order' %}
-    {% for project in projects %}
-      <li>
-        <a class="index-row" href="{{ project.url | relative_url }}">
-          <span class="row-meta">{{ project.year }}</span>
-          <span class="row-title">{{ project.title }}</span>
-          <span class="row-tag">{{ project.kind }}</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+  {% comment %}
+    Section order and labels are defined here. To add or reorder sections,
+    edit this list. Each project's front matter `group:` value must match
+    one of these keys. Projects with no `group:` fall into "Other".
+  {% endcomment %}
+  {% assign section_keys   = "tool,lab" | split: "," %}
+  {% assign section_labels = "Tools,Labs & Writeups" | split: "," %}
+
+  {% for key in section_keys %}
+    {% assign idx = forloop.index0 %}
+    {% assign group_projects = site.projects | where: "group", key | sort: "order" %}
+    {% if group_projects.size > 0 %}
+      <section class="project-group">
+        <div class="home-section-header">
+          <h2>{{ section_labels[idx] }}</h2>
+        </div>
+        <ul class="index-list">
+          {% for project in group_projects %}
+            <li>
+              <a class="index-row" href="{{ project.url | relative_url }}">
+                <span class="row-meta">{{ project.year }}</span>
+                <span class="row-title">{{ project.title }}</span>
+                <span class="row-tag">{{ project.kind }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+  {% endfor %}
+
+  {% comment %} Catch any project missing a group so nothing silently disappears. {% endcomment %}
+  {% assign ungrouped = site.projects | where_exp: "p", "p.group == nil" | sort: "order" %}
+  {% if ungrouped.size > 0 %}
+    <section class="project-group">
+      <div class="home-section-header">
+        <h2>Other</h2>
+      </div>
+      <ul class="index-list">
+        {% for project in ungrouped %}
+          <li>
+            <a class="index-row" href="{{ project.url | relative_url }}">
+              <span class="row-meta">{{ project.year }}</span>
+              <span class="row-title">{{ project.title }}</span>
+              <span class="row-tag">{{ project.kind }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
 </article>
