@@ -1,4 +1,5 @@
 ---
+group: lab
 title: "picoCTF — Where are the robots"
 order: 104
 year: 2026
