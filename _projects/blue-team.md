@@ -1,4 +1,5 @@
 ---
+group: lab
 title: Blue Team — Working Notes
 order: 6
 year: 2024
